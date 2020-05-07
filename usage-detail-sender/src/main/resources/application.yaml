@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          auto-add-partitions: true
+          min-partition-count: 4
+          transaction:
+            producer:
+              partition-count: 5
+        bindings:
+          output:
+            destination: usage-detail
+
